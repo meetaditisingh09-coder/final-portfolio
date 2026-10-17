@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Aditi Singh, a B.Tech Computer Science student specialising in AI and ML.">
+  <title>Aditi Singh | Portfolio</title>
+  <style>
+    :root {
+      --navy: #183653;
+      --blue: #234a78;
+      --accent: #4fa3d1;
+      --page: #f4f7fb;
+      --ink: #1f2937;
+      --muted: #5d6b7a;
+      --line: #d9e4f0;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--page);
+      color: var(--ink);
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 42px 15px 34px;
+      color: white;
+      text-align: center;
+      background: linear-gradient(135deg, var(--blue), var(--navy));
+    }
+    header h1 { margin: 8px 0 0; font-size: clamp(2rem, 5vw, 2.8rem); }
+    header p { margin: 4px 0; }
+    .profile {
+      width: 154px;
+      height: 154px;
+      margin-top: 14px;
+      object-fit: cover;
+      border: 4px solid white;
+      border-radius: 50%;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, .22);
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      padding: 11px;
+      text-align: center;
+      background: var(--navy);
+    }
+    nav a {
+      display: inline-block;
+      margin: 3px 8px;
+      color: white;
+      text-decoration: none;
+    }
+    nav a:hover, nav a:focus-visible { text-decoration: underline; }
+
+    .container { width: min(90%, 900px); margin: auto; }
+    section {
+      margin: 20px 0;
+      padding: clamp(18px, 4vw, 28px);
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 12px rgba(25, 54, 83, .06);
+    }
+    h2 {
+      margin-top: 0;
+      padding-bottom: 7px;
+      color: var(--blue);
+      border-bottom: 2px solid var(--line);
+    }
+    h3 { margin-bottom: 4px; color: #263d59; }
+    ul, ol { padding-left: 22px; }
+    a { color: #1769aa; }
+
+    .certificate-intro { color: var(--muted); }
+    .certificate-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 16px;
+    }
+    .certificate-card {
+      width: 100%;
+      padding: 0;
+      overflow: hidden;
+      color: inherit;
+      text-align: left;
+      cursor: pointer;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .certificate-card:hover, .certificate-card:focus-visible {
+      transform: translateY(-3px);
+      box-shadow: 0 7px 18px rgba(25, 54, 83, .15);
+    }
+    .certificate-card img {
+      display: block;
+      width: 100%;
+      height: 290px;
+      object-fit: cover;
+      object-position: top;
+      border-bottom: 1px solid var(--line);
+    }
+    .certificate-card span { display: block; padding: 11px 13px; font-weight: bold; }
+    .certificate-card small { display: block; padding: 0 13px 13px; color: var(--muted); }
+
+    dialog {
+      width: min(94vw, 860px);
+      max-height: 94vh;
+      padding: 0;
+      overflow: hidden;
+      border: 0;
+      border-radius: 10px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, .45);
+    }
+    dialog::backdrop { background: rgba(8, 24, 43, .78); }
+    .dialog-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 10px 14px;
+      color: white;
+      background: var(--navy);
+    }
+    .dialog-bar strong { font-size: 1rem; }
+    .dialog-bar button {
+      width: 32px;
+      height: 32px;
+      color: white;
+      font-size: 1.4rem;
+      line-height: 1;
+      cursor: pointer;
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, .75);
+      border-radius: 50%;
+    }
+    #certificate-preview {
+      display: block;
+      width: 100%;
+      max-height: calc(94vh - 55px);
+      object-fit: contain;
+      background: #111;
+    }
+
+    footer {
+      margin-top: 25px;
+      padding: 15px;
+      color: white;
+      text-align: center;
+      background: var(--navy);
+    }
+    @media (max-width: 620px) {
+      .certificate-grid { grid-template-columns: 1fr; }
+      .certificate-card img { height: 330px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img class="profile" src="assets/aditi-profile.png" alt="Aditi Singh profile photo">
+    <h1>Aditi Singh</h1>
+    <p>B.Tech Student | Computer Science (AI + ML)</p>
+    <p>Shri Ramswaroop Memorial University</p>
+  </header>
+
+  <nav aria-label="Main navigation">
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#learning">Learning</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main class="container">
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Hello! I am Aditi Singh, a B.Tech Computer Science student specializing in Artificial Intelligence and Machine Learning at Shri Ramswaroop Memorial University. I am interested in technology, programming, and learning how AI can solve real-life problems.</p>
+    </section>
+
+    <section id="education">
+      <h2>Academic Journey</h2>
+      <h3>B.Tech — CSE (AI + ML)</h3>
+      <p><strong>Shri Ramswaroop Memorial University</strong> — Currently pursuing.</p>
+
+      <h3>Class 12 — CBSE, 2024</h3>
+      <p>N Saraswati Vidya Mandir, Maldepur, Ballia, Uttar Pradesh</p>
+      <p>English: 81, Sanskrit: 92, Mathematics: 64, Physics: 62, Chemistry: 55</p>
+      <p><strong>Percentage (best five subjects): 70.8%</strong></p>
+
+      <h3>Class 10 — CBSE, 2022</h3>
+      <p>N Saraswati Vidya Mandir, Maldepur, Ballia, Uttar Pradesh</p>
+      <p>English: 54, Hindi: 90, Mathematics: 70, Science: 68, Social Science: 79</p>
+      <p><strong>Percentage (five main subjects): 72.2%</strong></p>
+      <p>Computer Applications (additional subject): 80/100</p>
+
+      <h3>Academic Certificates</h3>
+      <p class="certificate-intro">Select a certificate to view it in full size.</p>
+      <div class="certificate-grid">
+        <button class="certificate-card" type="button" data-image="assets/class-12-certificate.jpeg" data-title="Class 12 CBSE Mark Statement — 2024">
+          <img src="assets/class-12-certificate.jpeg" alt="Preview of Aditi Singh's Class 12 CBSE mark statement">
+          <span>Class 12 CBSE Mark Statement</span>
+          <small>2024 · Select to enlarge</small>
+        </button>
+        <button class="certificate-card" type="button" data-image="assets/class-10-certificate.jpeg" data-title="Class 10 CBSE Mark Statement — 2022">
+          <img src="assets/class-10-certificate.jpeg" alt="Preview of Aditi Singh's Class 10 CBSE mark statement">
+          <span>Class 10 CBSE Mark Statement</span>
+          <small>2022 · Select to enlarge</small>
+        </button>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills I Am Learning</h2>
+      <ul>
+        <li>HTML and CSS for website design</li>
+        <li>Python programming</li>
+        <li>C/C++ programming basics</li>
+        <li>Git and GitHub</li>
+        <li>Artificial Intelligence and Machine Learning basics</li>
+        <li>Communication, teamwork, and problem-solving</li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <h3>1. Personal Portfolio Website</h3>
+      <p>A simple website to share my introduction, education, skills, and contact details.</p>
+      <h3>2. Student Marks Calculator</h3>
+      <p>A beginner Python program to calculate total marks and percentage.</p>
+      <h3>3. Campus FAQ Chatbot — Project Idea</h3>
+      <p>A chatbot idea for answering common student questions about college and campus facilities.</p>
+      <p><em>Note: These are sample projects/project ideas. Update this section based on the projects you have actually completed.</em></p>
+    </section>
+
+    <section id="learning">
+      <h2>My Learning Process</h2>
+      <ol>
+        <li>Understand a topic from class notes or tutorials.</li>
+        <li>Practise examples by writing code.</li>
+        <li>Build a small project using what I learned.</li>
+        <li>Find and correct errors.</li>
+        <li>Improve my work and learn from feedback.</li>
+      </ol>
+    </section>
+
+    <section id="experience">
+      <h2>Graphic Era</h2>
+      <p>I have work/learning experience associated with Graphic Era.</p>
+      <p><em>Add your exact role, dates, and responsibilities here before publishing.</em></p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <p>Email: <a href="mailto:meetaditisingh09@gmail.com">meetaditisingh09@gmail.com</a></p>
+      <p>Phone: <a href="tel:+917668528416">+91 7668528416</a></p>
+    </section>
+  </main>
+
+  <dialog id="certificate-dialog" aria-labelledby="certificate-title">
+    <div class="dialog-bar">
+      <strong id="certificate-title">Certificate preview</strong>
+      <button type="button" id="close-dialog" aria-label="Close certificate preview">×</button>
+    </div>
+    <img id="certificate-preview" src="" alt="">
+  </dialog>
+
+  <footer><p>© 2026 Aditi Singh | My Portfolio</p></footer>
+
+  <script>
+    const dialog = document.querySelector('#certificate-dialog');
+    const preview = document.querySelector('#certificate-preview');
+    const title = document.querySelector('#certificate-title');
+
+    document.querySelectorAll('.certificate-card').forEach((card) => {
+      card.addEventListener('click', () => {
+        preview.src = card.dataset.image;
+        preview.alt = card.querySelector('img').alt;
+        title.textContent = card.dataset.title;
+        dialog.showModal();
+      });
+    });
+
+    document.querySelector('#close-dialog').addEventListener('click', () => dialog.close());
+    dialog.addEventListener('click', (event) => {
+      if (event.target === dialog) dialog.close();
+    });
+  </script>
+</body>
+</html>
